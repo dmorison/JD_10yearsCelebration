@@ -34,6 +34,7 @@ p {
 
 header,
 nav,
+main,
 section,
 article,
 aside,
@@ -41,6 +42,10 @@ footer,
 figure,
 figcaption {
 	display: block;
+}
+
+li {
+    list-style-type: none;
 }
 
 /**** clearfix ****/

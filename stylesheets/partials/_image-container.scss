@@ -1,0 +1,64 @@
+article.container {
+	width: 100%;
+}
+
+.frame-outer {
+	width: 680px;
+	height: 640px;
+	padding: 30px;
+	background: rgba(0, 0, 0, 0.5);
+	margin: 20px auto;
+
+	.frame-inner {
+		width: 85%;
+		height: 560px;
+		position: relative;
+		overflow: hidden;
+		border: 5px solid #000;
+
+		ul.image-list {
+			position: relative;
+			padding: 0;
+    		margin: 0;
+
+			li {
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				img {
+					-webkit-transition: opacity 2s ease-in-out;
+					-moz-transition: opacity 2s ease-in-out;
+					-o-transition: opacity 2s ease-in-out;
+					transition: opacity 2s ease-in-out;
+					opacity: 0;
+
+					&.active {
+						opacity: 1;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	nav.controls {
+
+		span {
+			display: inline-block;
+			padding: 10px;
+			cursor: pointer;
+
+			&.selected {
+				font-weight: bold;
+			}
+
+		}
+
+	}
+
+}

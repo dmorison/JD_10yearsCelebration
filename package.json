@@ -1,16 +1,29 @@
 {
-  "name": "sassing",
+  "name": "JD_10yearsCelebration",
   "version": "1.0.0",
-  "description": "",
+  "description": "Just a little tribute to being together for 10 years",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Dave",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.6.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmorison/JD_10yearsCelebration.git"
+  },
+  "keywords": [
+    "Jayde",
+    "Dave",
+    "relationship"
+  ],
+  "bugs": {
+    "url": "https://github.com/dmorison/JD_10yearsCelebration/issues"
+  },
+  "homepage": "https://github.com/dmorison/JD_10yearsCelebration"
 }
