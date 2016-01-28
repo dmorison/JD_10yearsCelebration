@@ -2,7 +2,7 @@ body {
 	background: #1a1a1a;
 	color: #eee;
 	font-family: 'Poiret One', cursive, Arial, serif;
-	font-size: 1.2em;
+	font-size: 0.9em;
 }
 
 header {
@@ -26,8 +26,7 @@ main {
 		width: 100%;
 		text-align: center;
 		background: #2f2f2f;
-		/* padding: 40px 0; */
-		padding-top: 2%;
+		display: table;
 		box-sizing: border-box;
 
 		&.title {
@@ -36,6 +35,11 @@ main {
 
 		&.footer {
 			box-shadow: 0px -2px 20px 0px rgba(0, 0, 0, 0.8);
+		}
+
+		.holder {
+			display: table-cell;
+			vertical-align: middle;
 		}
 
 	}
@@ -128,18 +132,24 @@ main {
 
 @media only screen and (min-width: 460px) {
 
+	body {
+		font-size: 1.2em;
+	}
+
 	main {
 
 		article.container {
 
 			.frame-outer {
-				width: 640px;
+				/* width: 640px; */
 				margin: 0 auto;
 
 				.frame-mid {
+					width: 50%;
+					margin: 0 auto;
 
 					.frame-inner {
-						margin: 0 auto;
+						/* margin: 0 auto; */
 
 						ul.image-list {
 
@@ -147,7 +157,6 @@ main {
 
 								img {
 									width: auto;
-									height: 460px;
 								}
 
 							}

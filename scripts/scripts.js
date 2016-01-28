@@ -9,7 +9,6 @@ console.log('height 10: ' + height_10);
 
 var mainView = document.querySelector('main');
 mainView.style.height = windowHeight + 'px';
-// mainView.style.overflow = 'hidden';
 var sectionTitle = mainView.querySelector('.title');
 sectionTitle.style.height = height_15 + 'px';
 var articleContainer = mainView.querySelector('article');
@@ -20,6 +19,13 @@ sectionFooter.style.height = height_10 + 'px';
 mainView.querySelector('.frame-outer').style.height = height_75 - 60 + 'px';
 // mainView.querySelector('.frame-inner').style.height = '100%';
 
+var imagesArray = mainView.querySelectorAll('.image');
+if (window.innerWidth > 460) {
+  console.log(imagesArray);
+  for (var i = 0; i < imagesArray.length; i++) {
+    imagesArray[i].style.height = height_75 - 120 + 'px';
+  }
+}
 var imageHeight = document.querySelector('.image').clientHeight + 10;
 console.log(imageHeight);
 var controlsHeight = document.querySelector('.controls').clientHeight;
