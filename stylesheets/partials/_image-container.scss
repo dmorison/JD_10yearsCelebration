@@ -1,7 +1,6 @@
 body {
 	/* background: url(../images/nice_snow.png); */
-	background: #D9FAF8;
-	background: black;
+	background: #1a1a1a;
 	color: #eee;
 	font-family: 'Poiret One', cursive, Arial, serif;
 	font-size: 1.2em;
@@ -17,25 +16,25 @@ header {
 	}
 }
 
-footer {
-	text-align: center;
-	position: relative;
-	/* top: -100px; */
-}
+
 
 main {
 	position: relative;
 
-	article.title {
+	> section {
 		width: 100%;
+		text-align: center;
 		background: #2f2f2f;
-		padding: 20px 0 180px 0;
-		margin-bottom: 30px;
+		padding: 40px 0;
 
-		> section {
-			width: 90%;
-			margin: 0 auto;
-			text-align: center;
+		&.title {
+			margin-bottom: 20px;
+			box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.8);
+		}
+
+		&.footer {
+			margin-top: 20px;
+			box-shadow: 0px -2px 20px 0px rgba(0, 0, 0, 0.8);
 		}
 	}
 
@@ -46,7 +45,7 @@ main {
 		position: relative;
 		/* top: -174px; */
 		/* background: rgba(56, 204, 51, 0.5); */
-		background: #3f3f3f;
+		/* background: #3f3f3f; */
 		box-sizing: border-box;
 		margin: 0 auto;
 		/* box-shadow: 0px 0px 10px 4px rgba(255, 255, 255, 0.3); */
@@ -138,11 +137,8 @@ main {
 
 	main {
 
-		article.title {
+		> section {
 
-			> section {
-				width: 70%;
-			}
 		}
 
 		article.container {

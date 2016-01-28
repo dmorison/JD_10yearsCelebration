@@ -1,3 +1,9 @@
+var windowHeight = window.innerHeight;
+console.log(windowHeight);
+var mainView = document.querySelector('main');
+mainView.style.height = windowHeight + 'px';
+mainView.style.overflow = 'hidden';
+
 var imgLst = document.querySelector('.image-list');
 // console.log(imgLst);
 
