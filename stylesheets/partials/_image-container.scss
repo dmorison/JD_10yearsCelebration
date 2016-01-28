@@ -6,17 +6,46 @@ body {
 }
 
 header {
-	background: #202020;
-	padding: 30px;
+	width: 100%;
+	position: absolute;
+	background-image: url(../images/pyga.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	/* background-size: 100% 100%; */
+	z-index: 1;
+	overflow: hidden !important;
+	-webkit-transition: height 1.5s;
+	-moz-transition: height 1.5s;
+	-o-transition: height 1.5s;
+	transition: height 1.5s;
 
-	h1 {
-		font-family: 'Pacifico', cursive, Arial, serif;
+	.banner {
 		text-align: center;
+		background: rgba(0, 0, 0, 0.6);
+		padding: 30px 0;
+		position: relative;
+		top: 32%;
+
+		h1 {
+			font-family: 'Pacifico', cursive, Arial, serif;
+			margin-bottom: 14px;
+		}
+
+		#enter {
+			width: 200px;
+			background-color: red;
+			margin: 0 auto;
+			cursor: pointer;
+		}
+
 	}
 	
 }
 
-
+/* .wrapper {
+	position: absolute;
+} */
 
 main {
 	position: relative;
@@ -134,6 +163,19 @@ main {
 
 	body {
 		font-size: 1.2em;
+	}
+
+	header {
+
+		.banner {
+			padding: 60px 0;
+
+			h1 {
+				margin-bottom: 20px;
+			}
+
+		}
+
 	}
 
 	main {

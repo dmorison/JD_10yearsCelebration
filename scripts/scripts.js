@@ -1,5 +1,9 @@
 var windowHeight = window.innerHeight;
 console.log('window height: ' + windowHeight);
+
+var header = document.querySelector('header');
+header.style.height = windowHeight + 'px';
+
 var height_75 = windowHeight * 0.75;
 console.log('height 75: ' + height_75);
 var height_15 = windowHeight * 0.15;
@@ -36,6 +40,13 @@ var marginCalc = ((height_75 - 60) - (imageHeight + controlsHeight + 10)) / 2;
 console.log('top margin should be: ' + marginCalc);
 mainView.querySelector('.frame-mid').style.marginTop = marginCalc + 'px';
 
+var enterButton = document.getElementById('enter');
+enterButton.addEventListener('click', function() {
+  header.style.height = 0 + 'px';
+});
+
+
+//****** photo frame functionality ******//
 
 var imgLst = document.querySelector('.image-list');
 // console.log(imgLst);
