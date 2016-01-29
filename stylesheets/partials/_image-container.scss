@@ -3,11 +3,13 @@ body {
 	color: #eee;
 	font-family: 'Poiret One', cursive, Arial, serif;
 	font-size: 0.9em;
+	overflow: hidden !important;
 }
 
 header {
 	width: 100%;
 	position: absolute;
+	top: 0px;
 	background-image: url(../images/pyga.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -15,10 +17,10 @@ header {
 	/* background-size: 100% 100%; */
 	z-index: 3;
 	overflow: hidden !important;
-	-webkit-transition: height 1.5s;
-	-moz-transition: height 1.5s;
-	-o-transition: height 1.5s;
-	transition: height 1.5s;
+	-webkit-transition: top 1s;
+	-moz-transition: top 1s;
+	-o-transition: top 1s;
+	transition: top 1s;
 
 	.banner {
 		text-align: center;
@@ -33,27 +35,28 @@ header {
 		}
 
 		#enter {
-			width: 152px;
-			height: 38px;
+			width: 50px;
+			height: 50px;
 			position: relative;
 			margin: 0 auto;
 			cursor: pointer;
 
 			> span {
 				display: block;
-				width: 100%;
-				height: 28px;
+				width: 45px;
+				height: 45px;
 				position: relative;
 				top: 0px;
-				background-image: url(../images/down-arrow.png);
+				background-image: url(../images/enter-arrow.png);
 				background-repeat: no-repeat;
-				-webkit-transition: top 1s;
-				-moz-transition: top 1s;
-				-o-transition: top 1s;
-				transition: top 1s;
+				background-size: 100% 100%;
+				-webkit-transition: top 0.3s;
+				-moz-transition: top 0.3s;
+				-o-transition: top 0.3s;
+				transition: top 0.3s;
 
 				&:hover {
-					top: 10px;
+					top: 5px;
 				}
 
 			}

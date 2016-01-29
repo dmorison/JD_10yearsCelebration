@@ -65,7 +65,7 @@ mainView.querySelector('.frame-mid').style.marginTop = marginCalc + 'px';
 
 var enterButton = document.getElementById('enter');
 enterButton.addEventListener('click', function() {
-  header.style.height = 0 + 'px';
+  header.style.top = windowHeight + 10 + 'px';
 });
 
 
