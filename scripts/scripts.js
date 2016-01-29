@@ -29,6 +29,24 @@ if (window.innerWidth > 460) {
   for (var i = 0; i < imagesArray.length; i++) {
     imagesArray[i].style.height = height_75 - 120 + 'px';
   }
+
+  var frameMidWidth = mainView.querySelector('.frame-mid').clientWidth;
+  console.log('frame mid width: ' + frameMidWidth);
+  mainView.querySelector('.controls').style.width = frameMidWidth * 2 + 'px';
+  var controlsArray = mainView.querySelectorAll('.control');
+  for (var p = 0; p < imagesArray.length; p++) {
+    controlsArray[p].style.width = frameMidWidth / 6 + 'px';
+  }
+
+  var navRight = mainView.querySelector('#nav-right');
+  navRight.addEventListener('click', function() {
+    mainView.querySelector('.controls').style.left = '-' + frameMidWidth + 'px';
+  });
+
+  var navLeft = mainView.querySelector('#nav-left');
+  navLeft.addEventListener('click', function() {
+    mainView.querySelector('.controls').style.left = '0px';
+  });
 }
 var imageHeight = document.querySelector('.image').clientHeight + 10;
 console.log(imageHeight);
@@ -39,6 +57,7 @@ mainView.querySelector('.frame-mid').style.height = imageHeight + controlsHeight
 var marginCalc = ((height_75 - 60) - (imageHeight + controlsHeight + 10)) / 2;
 console.log('top margin should be: ' + marginCalc);
 mainView.querySelector('.frame-mid').style.marginTop = marginCalc + 'px';
+
 
 var enterButton = document.getElementById('enter');
 enterButton.addEventListener('click', function() {

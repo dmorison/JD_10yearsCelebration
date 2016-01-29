@@ -13,7 +13,7 @@ header {
 	background-position: center;
 	background-size: cover;
 	/* background-size: 100% 100%; */
-	z-index: 1;
+	z-index: 2;
 	overflow: hidden !important;
 	-webkit-transition: height 1.5s;
 	-moz-transition: height 1.5s;
@@ -143,17 +143,31 @@ main {
 
 				}
 
-				nav.controls {
+				.controls-wrapper {
+					width: 100%;
 					position: absolute;
 					bottom: 0px;
+					overflow-x: scroll;
+
+					.navigator {
+						display: none;
+					}
+
+				}
+
+				nav.controls {
+					width: 686px;
 
 					span {
 						font-weight: bold;
 						color: #333;
+						text-align: center;
+						width: 58px;
 						display: inline-block;
-						padding: 8px;
+						padding: 8px 0;
 						background-color: #13e6b1;
 						margin-right: 6px;
+						box-sizing: border-box;
 						cursor: pointer;
 						-webkit-transition: all 1.5s;
 						-moz-transition: all 1.5s;
@@ -228,10 +242,43 @@ main {
 
 					}
 
+					.controls-wrapper {
+						/* overflow-x: visible; */
+						overflow-x: hidden;
+
+						.navigator {
+							display: block;
+							width: 30px;
+							height: 42px;
+							background: rgba(0, 0, 0, 0.6);
+							position: absolute;
+							top: 0px;
+							cursor: pointer;
+							z-index: 1;
+
+							&#nav-left {
+								left: 0px;
+							}
+
+							&#nav-right {
+								right: 0px;
+							}
+						}
+
+					}
+
 					nav.controls {
+						/* width: 100%; */
+						width: 822px;
+						position: relative;
+						left: 0px;
+						-webkit-transition: left 1.5s;
+						-moz-transition: left 1.5s;
+						-o-transition: left 1.5s;
+						transition: left 1.5s;
 
 						span {
-
+							width: 70px;
 						}
 
 					}
