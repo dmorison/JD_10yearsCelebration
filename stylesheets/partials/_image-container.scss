@@ -222,7 +222,7 @@ main {
 				margin: 0 auto;
 
 				.frame-mid {
-					width: 50%;
+					width: 420px;
 					margin: 0 auto;
 
 					.frame-inner {
@@ -233,7 +233,7 @@ main {
 							li {
 
 								img {
-									width: auto;
+									/* width: auto; */
 								}
 
 							}
@@ -243,7 +243,6 @@ main {
 					}
 
 					.controls-wrapper {
-						/* overflow-x: visible; */
 						overflow-x: hidden;
 
 						.navigator {
@@ -334,8 +333,22 @@ main {
 
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 768px) {
 
+	main {
 
+		article.container {
+
+			.frame-outer {
+
+				.frame-mid {
+					width: 720px;
+				}
+
+			}
+
+		}
+
+	}
 
 }

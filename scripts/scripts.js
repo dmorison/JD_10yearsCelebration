@@ -26,9 +26,9 @@ mainView.querySelector('.frame-outer').style.height = height_75 - 60 + 'px';
 var imagesArray = mainView.querySelectorAll('.image');
 if (window.innerWidth > 460) {
   console.log(imagesArray);
-  for (var i = 0; i < imagesArray.length; i++) {
-    imagesArray[i].style.height = height_75 - 120 + 'px';
-  }
+  // for (var i = 0; i < imagesArray.length; i++) {
+  //   imagesArray[i].style.height = height_75 - 120 + 'px';
+  // }
 
   var frameMidWidth = mainView.querySelector('.frame-mid').clientWidth;
   console.log('frame mid width: ' + frameMidWidth);
