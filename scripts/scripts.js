@@ -41,11 +41,15 @@ if (window.innerWidth > 460) {
   var navRight = mainView.querySelector('#nav-right');
   navRight.addEventListener('click', function() {
     mainView.querySelector('.controls').style.left = '-' + frameMidWidth + 'px';
+    this.style.display = 'none';
+    navLeft.style.display = 'block';
   });
 
   var navLeft = mainView.querySelector('#nav-left');
   navLeft.addEventListener('click', function() {
     mainView.querySelector('.controls').style.left = '0px';
+    this.style.display = 'none';
+    navRight.style.display = 'block';
   });
 }
 var imageHeight = document.querySelector('.image').clientHeight + 10;

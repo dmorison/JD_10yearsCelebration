@@ -13,7 +13,7 @@ header {
 	background-position: center;
 	background-size: cover;
 	/* background-size: 100% 100%; */
-	z-index: 2;
+	z-index: 3;
 	overflow: hidden !important;
 	-webkit-transition: height 1.5s;
 	-moz-transition: height 1.5s;
@@ -169,10 +169,10 @@ main {
 						margin-right: 6px;
 						box-sizing: border-box;
 						cursor: pointer;
-						-webkit-transition: all 1.5s;
-						-moz-transition: all 1.5s;
-						-o-transition: all 1.5s;
-						transition: all 1.5s;
+						-webkit-transition: all 1s;
+						-moz-transition: all 1s;
+						-o-transition: all 1s;
+						transition: all 1s;
 
 						&.selected {
 							background-color: #D9FAF8;
@@ -250,19 +250,60 @@ main {
 							display: block;
 							width: 30px;
 							height: 42px;
-							background: rgba(0, 0, 0, 0.6);
+							background: rgba(0, 0, 0, 0.6); /* For browsers that do not support gradients */
 							position: absolute;
 							top: 0px;
 							cursor: pointer;
 							z-index: 1;
+							-webkit-transition: width 0.5s;
+							-moz-transition: width 0.5s;
+							-o-transition: width 0.5s;
+							transition: width 0.5s;
+
+							> span {
+								display: block;
+								width: 30px;
+								height: 42px;
+								z-index: 2;
+								background-repeat: no-repeat;
+								background-size: 14px 32px;
+							}
 
 							&#nav-left {
 								left: 0px;
+								background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* For Safari 5.1 to 6.0 */
+							    background: -o-linear-gradient(right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* For Opera 11.1 to 12.0 */
+							    background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* For Firefox 3.6 to 15 */
+							    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Standard syntax */
+							    display: none;
+
+								> span {
+									background-image: url(../images/arrow-left.png);
+									background-position: 4px 5px;
+								}
+
 							}
 
 							&#nav-right {
 								right: 0px;
+								background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* For Safari 5.1 to 6.0 */
+							    background: -o-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* For Opera 11.1 to 12.0 */
+							    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* For Firefox 3.6 to 15 */
+							    background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Standard syntax */
+
+								> span {
+									background-image: url(../images/arrow-right.png);
+									background-position: 12px 5px;
+									position: absolute;
+									right: 4px;
+								}
+
 							}
+
+							&:hover {
+								width: 50px;
+							}
+
 						}
 
 					}
