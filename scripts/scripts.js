@@ -72,7 +72,7 @@ setTimeout(function() {
   var marginCalc = ((height_75 - 60) - (imageHeight + controlsHeight + 10)) / 2;
   // console.log('top margin should be: ' + marginCalc);
   mainView.querySelector('.frame-mid').style.marginTop = marginCalc + 'px';
-}, 2000);
+}, 4000);
 
 
 
