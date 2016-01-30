@@ -1,15 +1,15 @@
 var windowHeight = window.innerHeight;
-console.log('window height: ' + windowHeight);
+// console.log('window height: ' + windowHeight);
 
 var header = document.querySelector('header');
 header.style.height = windowHeight + 'px';
 
 var height_75 = windowHeight * 0.75;
-console.log('height 75: ' + height_75);
+// console.log('height 75: ' + height_75);
 var height_15 = windowHeight * 0.15;
-console.log('height 15: ' + height_15);
+// console.log('height 15: ' + height_15);
 var height_10 = windowHeight * 0.1;
-console.log('height 10: ' + height_10);
+// console.log('height 10: ' + height_10);
 
 var mainView = document.querySelector('main');
 mainView.style.height = windowHeight + 'px';
@@ -21,26 +21,30 @@ var sectionFooter = mainView.querySelector('.footer');
 sectionFooter.style.height = height_10 + 'px';
 
 mainView.querySelector('.frame-outer').style.height = height_75 - 60 + 'px';
-// mainView.querySelector('.frame-inner').style.height = '100%';
 
-var imagesArray = mainView.querySelectorAll('.image');
 if (window.innerWidth > 460) {
-  console.log(imagesArray);
-  // for (var i = 0; i < imagesArray.length; i++) {
-  //   imagesArray[i].style.height = height_75 - 120 + 'px';
-  // }
 
   var frameMidWidth = mainView.querySelector('.frame-mid').clientWidth;
-  console.log('frame mid width: ' + frameMidWidth);
+  // console.log('frame mid width: ' + frameMidWidth);
   mainView.querySelector('.controls').style.width = frameMidWidth * 2 + 'px';
   var controlsArray = mainView.querySelectorAll('.control');
-  for (var p = 0; p < imagesArray.length; p++) {
+  for (var p = 0; p < controlsArray.length; p++) {
     controlsArray[p].style.width = frameMidWidth / 6 + 'px';
+  }
+
+  var imagesArray = mainView.querySelectorAll('.image');
+  for (var i = 0; i < imagesArray.length; i++) {
+    imagesArray[i].style.height = height_75 - 120 + 'px';
+    var imageWidth = imagesArray[i].clientWidth + 10;
+    // console.log('image width: ' + imageWidth);
+    var imageMargin = (frameMidWidth - imageWidth) / 2;
+    // console.log('image margin: ' + imageMargin);
+    imagesArray[i].style.marginLeft = imageMargin + 'px';
   }
 
   var navRight = mainView.querySelector('#nav-right');
   navRight.addEventListener('click', function() {
-    mainView.querySelector('.controls').style.left = '-' + frameMidWidth + 'px';
+    mainView.querySelector('.controls').style.left = '-' + (frameMidWidth - 50) + 'px';
     this.style.display = 'none';
     navLeft.style.display = 'block';
   });
@@ -52,16 +56,16 @@ if (window.innerWidth > 460) {
     navRight.style.display = 'block';
   });
 }
+
 var imageHeight = document.querySelector('.image').clientHeight + 10;
-console.log(imageHeight);
+// console.log(imageHeight);
 var controlsHeight = document.querySelector('.controls').clientHeight;
-console.log(controlsHeight);
+// console.log(controlsHeight);
 mainView.querySelector('.frame-mid').style.height = imageHeight + controlsHeight + 10 + 'px';
 
 var marginCalc = ((height_75 - 60) - (imageHeight + controlsHeight + 10)) / 2;
-console.log('top margin should be: ' + marginCalc);
+// console.log('top margin should be: ' + marginCalc);
 mainView.querySelector('.frame-mid').style.marginTop = marginCalc + 'px';
-
 
 var enterButton = document.getElementById('enter');
 enterButton.addEventListener('click', function() {
