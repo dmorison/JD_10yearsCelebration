@@ -35,12 +35,17 @@ if (window.innerWidth > 460) {
   var imagesArray = mainView.querySelectorAll('.image');
   for (var i = 0; i < imagesArray.length; i++) {
     imagesArray[i].style.height = height_75 - 120 + 'px';
-    var imageWidth = imagesArray[i].clientWidth + 10;
-    // console.log('image width: ' + imageWidth);
-    var imageMargin = (frameMidWidth - imageWidth) / 2;
-    // console.log('image margin: ' + imageMargin);
-    imagesArray[i].style.marginLeft = imageMargin + 'px';
   }
+
+  setTimeout(function() {
+    var newImagesArray = mainView.querySelectorAll('.image');
+    for (var q = 0; q < newImagesArray.length; q++) {
+      // console.log(newImagesArray[q].clientWidth);
+      var imageWidth = newImagesArray[q].clientWidth + 10;
+      var imageMargin = (frameMidWidth - imageWidth) / 2;
+      newImagesArray[q].style.marginLeft = imageMargin + 'px';
+    }
+  }, 1000);
 
   var navRight = mainView.querySelector('#nav-right');
   navRight.addEventListener('click', function() {
@@ -57,15 +62,19 @@ if (window.innerWidth > 460) {
   });
 }
 
-var imageHeight = document.querySelector('.image').clientHeight + 10;
-// console.log(imageHeight);
-var controlsHeight = document.querySelector('.controls').clientHeight;
-// console.log(controlsHeight);
-mainView.querySelector('.frame-mid').style.height = imageHeight + controlsHeight + 10 + 'px';
+setTimeout(function() {
+  var imageHeight = document.querySelector('.image').clientHeight + 10;
+  // console.log(imageHeight);
+  var controlsHeight = document.querySelector('.controls').clientHeight;
+  // console.log(controlsHeight);
+  mainView.querySelector('.frame-mid').style.height = imageHeight + controlsHeight + 10 + 'px';
 
-var marginCalc = ((height_75 - 60) - (imageHeight + controlsHeight + 10)) / 2;
-// console.log('top margin should be: ' + marginCalc);
-mainView.querySelector('.frame-mid').style.marginTop = marginCalc + 'px';
+  var marginCalc = ((height_75 - 60) - (imageHeight + controlsHeight + 10)) / 2;
+  // console.log('top margin should be: ' + marginCalc);
+  mainView.querySelector('.frame-mid').style.marginTop = marginCalc + 'px';
+}, 2000);
+
+
 
 var enterButton = document.getElementById('enter');
 enterButton.addEventListener('click', function() {
