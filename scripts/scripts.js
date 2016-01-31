@@ -45,7 +45,7 @@ if (window.innerWidth > 460) {
       var imageMargin = (frameMidWidth - imageWidth) / 2;
       newImagesArray[q].style.marginLeft = imageMargin + 'px';
     }
-  }, 1000);
+  }, 2000);
 
   var navRight = mainView.querySelector('#nav-right');
   navRight.addEventListener('click', function() {
